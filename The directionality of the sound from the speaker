@@ -1,0 +1,22 @@
+import random
+
+def calculate_sound_direction():
+    angles = [0, 45, 90, 135, 180, 225, 270, 315]  # Possible sound angles in degrees
+    selected_angle = random.choice(angles)  # Randomly select an angle
+    return selected_angle
+
+def display_sound_direction(angle):
+    if angle == 0:
+        print("Sound is coming from the front.")
+    elif angle == 90:
+        print("Sound is coming from the right.")
+    elif angle == 180:
+        print("Sound is coming from behind.")
+    elif angle == 270:
+        print("Sound is coming from the left.")
+    else:
+        print("Sound is coming from an angle:", angle)
+
+if __name__ == "__main__":
+    sound_angle = calculate_sound_direction()
+    display_sound_direction(sound_angle)
